@@ -1,4 +1,4 @@
-1.1 GETTING STARTED
+1 GETTING STARTED
 
 We need to compile the .c program so we can run it. In linux:
 
@@ -48,3 +48,45 @@ We need to compile the .c program so we can run it. In linux:
   printf(""%3.1f", i) /*at least three characters wide, with one digit after the decimal point
 
 1.3 THE FOR STATEMENT
+
+    #include <stdio.h>
+
+    /* print Fahrenheit-Celsius table */
+    main()
+    {
+        int fahr;
+
+        for (fahr = 0; fahr <= 300; fahr = fahr + 20)
+            printf("%3d %6.1f\n", fahr, (5.0/9.0)*(fahr-32));
+
+- The for statement is a loop, a generalization of the while. Within the parentheses, there are three parts, separeted by semicolons.
+- The inicialization is done once, before the loop proper is entered:
+
+    fahr = 0
+
+- The second part is the test/condition that controls the loop; the loop runs if it is true:
+
+    fahr <= 300
+
+- Then, there is the increment step:
+
+    fahr = fahr + 20
+
+- The loop terminates if the condition has become false.
+
+1.4 Symbolic Constants
+
+- We can use symbolic names or symbolic constants to be easier to deal with numbers and other characters
+
+    #define name replacement text
+
+1.5 Character Input and Output
+
+- getchar reads the next input character from a text stream and returns that as its value.
+- It is possible to contain it in a variable:
+
+    c = getchar()
+
+- putchar prints a character each time it is called:
+
+    putchar(c)
