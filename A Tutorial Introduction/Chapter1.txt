@@ -90,3 +90,43 @@ We need to compile the .c program so we can run it. In linux:
 - putchar prints a character each time it is called:
 
     putchar(c)
+
+1.7 FUNCTIONS
+
+- A function provides a convenient way to encapsulate some computation, which can then be used
+without worrying about its implementation
+    - we can ignore how a job is done, focusing only on what is done.
+
+- A function definition has this form:
+
+    return-type function-name(parameter declarations, if any)
+    {
+        declarations
+        statements
+    }
+
+- Function definitions can appear in any order, and in one source file or several, althoug it cant
+be split between files
+
+- In powerfunction.c, the function power is called twice by main:
+
+    printf("%d %d %d\n", i, power(2,i), power(-3,i));
+
+- Each call passes two arguments to power, that returns an integer.
+
+- The firts line of power declares the parameter types and names, and the type of the result returned
+
+    int power(int base, int n)
+
+- The names used for its parameters are local to power.
+
+- The value that power computes is returned to main by the return statement. Any expression may follow
+return.
+    - A function need to return a value. This is also true for main.
+    - Typically, a return value of zero implies normal termination; non-zero means erroneous terminantion
+
+- At the beginning of powerfunction.c, we have a function prototype:
+
+    int power(int m, int n);
+
+- It says that power is a function that expects two int arguments and returns an int.
