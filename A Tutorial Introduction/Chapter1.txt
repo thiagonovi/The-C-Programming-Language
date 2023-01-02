@@ -130,3 +130,23 @@ return.
     int power(int m, int n);
 
 - It says that power is a function that expects two int arguments and returns an int.
+
+1.8 ARGUMENTS - CALL BY VALUE
+
+- In C, all function arguments are passed "by value".
+    - This means that the called function is given the values of its arguments in temporary variables rather than the originals.
+- In C, the called function cannot directly alter a variable in the calling function;
+    - it can only alter its private, temporary copy.
+
+1.9 CHARACTER ARRAYS
+
+- The most common type of array is the array of characters. We created longestLine.c to read a set of text lines and prints the longest
+- In
+
+	int getline(char s[], int lim)
+
+  we need to supply the size of the array s to set aside storage; this is done in main.
+ - The function copy() don't return a value; that's why it's return type is void.
+ - getline() puts the character '\0' (the null character) at the end of the array it is creating, to mark the end of the string of characters.
+ - In C, a string "hello\n" is stored in an array of characters containing the characters of the string and  terminated with a '\0' to mark the end.
+ 	- h | e | l | l | o | \n | \0
